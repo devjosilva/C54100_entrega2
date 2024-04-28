@@ -1,0 +1,30 @@
+.item-detail {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-detail img {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .item-detail h2 {
+    font-size: 24px;
+  }
+  
+  .item-detail p {
+    margin-bottom: 10px;
+  }
+  
+  .item-detail button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .item-detail button:hover {
+    background-color: #555;
+  }
+  

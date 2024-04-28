@@ -1,0 +1,60 @@
+.item-list-container {
+    margin-top: 20px;
+  }
+  
+  .item-list-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .categories {
+    margin-bottom: 20px;
+  }
+  
+  .categories button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .categories button:hover {
+    background-color: #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  li img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  li button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  li button:hover {
+    background-color: #555;
+  }
+  
+  li a {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  

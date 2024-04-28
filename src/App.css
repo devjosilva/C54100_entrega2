@@ -1,0 +1,73 @@
+.cart-container {
+  margin: 20px;
+}
+
+.cart-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+li img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+li div {
+  flex: 1;
+}
+
+li div h3 {
+  margin: 0;
+}
+
+li div p {
+  margin: 5px 0;
+}
+
+li button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #555;
+}
+
+.subtotal {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtotal p {
+  margin: 0;
+}
+
+.subtotal button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subtotal button:hover {
+  background-color: #555;
+}
