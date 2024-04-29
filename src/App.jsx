@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
-import Navbar from 'src/components/NavBar';
-import ItemListContainer from 'src/components/ItemListContainer';
-import ItemDetail from 'src/components/ItemDetail';
-import Cart from 'src/pages/Cart';
-import 'src/index.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Navbar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetail from './components/ItemDetail';
+import Cart from './pages/Cart';
+import './index.css';
 
 const App = () => {
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
