@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Navbar from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
-import ItemDetail from './Components/ItemDetail';
+import Navbar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetail from './components/ItemDetail';
 import Cart from './pages/Cart';
 import './index.css';
 
