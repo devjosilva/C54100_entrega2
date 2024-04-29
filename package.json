@@ -2,7 +2,7 @@
   "name": "entrega2",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://josilva.github.io/entrega2/",
+  "homepage": "https://devjosilva.github.io/entrega2/",
   "type": "module",
   "scripts": {
     "predeploy" : "npm run build",
