@@ -1,12 +1,24 @@
+// ItemDetail.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useParams } from 'react-router-dom';
 import '../styles/ItemDetail.css';
 
-const ItemDetail = ({ product, addToCart }) => {
-    const [products, setProducts] = useState([]);
+const ItemDetail = ({ products, addToCart }) => {
+  const { id } = useParams();
 
-    const handleAddToCart = () => {
+  if (!products.length) {
+    return <h2>Cargando...</h2>;
+  }
+
+  const product = products.find(product => product.id === parseInt(id));
+  
+  if (!product) {
+    return <h2>Producto no encontrado.</h2>;
+  }
+
+  const handleAddToCart = () => {
     addToCart(product);
   };
 

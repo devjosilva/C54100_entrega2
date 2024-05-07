@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/NavBar';
@@ -10,6 +10,22 @@ import './index.css';
 
 const App = () => {
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products');
+      const data = await response.json();
+      setProducts(data);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  };
 
   const [cart, setCart] = useState([]);
 
@@ -33,8 +49,8 @@ const App = () => {
         <Header />
         <Navbar isUserAuthenticated={isUserAuthenticated} cartItemCount={cart.length} />
         <Routes>
-          <Route path="/products" element={<ItemListContainer addToCart={addToCart} />} />
-          <Route path="/products/:id" element={<ItemDetail addToCart={addToCart} />} />
+          <Route path="/products" element={<ItemListContainer products={products} addToCart={addToCart} />} />
+          <Route path="/products/:id" element={<ItemDetail products={products} addToCart={addToCart} />} />
           <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} />} />
         </Routes>
         <Footer />
