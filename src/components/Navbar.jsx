@@ -3,9 +3,10 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Dropdown from "./Dropdown";
 import '../styles/Navbar.css';
 
-const Navbar = ({ isUserAuthenticated, cartItemCount }) => {
+const Navbar = ({ isUserAuthenticated, cartItemCount, categories }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -23,7 +24,7 @@ const Navbar = ({ isUserAuthenticated, cartItemCount }) => {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">Quiénes somos</Link></li>
-              <li><Link to="/products">Productos</Link></li>
+              <li><Link to="/category/all">Productos</Link></li>
               <li><Link to="/contact">Contacto</Link></li>
             </ul>
           </div>

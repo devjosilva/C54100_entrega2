@@ -30,7 +30,7 @@ const ItemDetail = ({ products, addToCart }) => {
         <p>{product.description}</p>
         <p>Precio: ${product.price}</p>
         <button onClick={handleAddToCart}><FaShoppingCart /> Añadir al Carrito</button>
-        <Link to="/products">Volver a Productos</Link>
+        <Link to="/category">Volver a Productos</Link>
       </div>
     </div>
   );
